@@ -2,12 +2,13 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Genre
  *
- * @ORM\Table(name="genre")
+ * @ORM\Table(name="Genre")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\GenreRepository")
  */
 class Genre
@@ -27,6 +28,18 @@ class Genre
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
+    /**
+     * One Genre has Many Games
+     * @ORM\OneToMany(targetEntity="Game", mappedBy="genre")
+     */
+    private $games;
+
+
+    public function __construct()
+    {
+        $this->games = new ArrayCollection();
+    }
 
 
     /**
@@ -61,6 +74,22 @@ class Genre
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGames()
+    {
+        return $this->games;
+    }
+
+    /**
+     * @param mixed $games
+     */
+    public function setGames($games)
+    {
+        $this->games = $games;
     }
 }
 

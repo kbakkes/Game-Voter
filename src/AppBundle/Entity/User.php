@@ -2,12 +2,13 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * User
  *
- * @ORM\Table(name="user")
+ * @ORM\Table(name="User")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
 class User
@@ -51,10 +52,21 @@ class User
 
     /**
      * @var string
-     *
      * @ORM\Column(name="lastname", type="string", length=255)
      */
     private $lastname;
+
+    /**
+     * One User has many Games
+     * @ORM\OneToMany(targetEntity="Game", mappedBy="uploadedBy")
+     */
+    private $games;
+
+
+    public function __construct() {
+        $this->games = new ArrayCollection();
+    }
+
 
 
     /**
@@ -186,5 +198,23 @@ class User
     {
         return $this->lastname;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getGames()
+    {
+        return $this->games;
+    }
+
+    /**
+     * @param mixed $games
+     */
+    public function setGames($games)
+    {
+        $this->games = $games;
+    }
+
+
 }
 

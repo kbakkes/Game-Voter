@@ -9,10 +9,9 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>Year</th>
-                <th>Genreid</th>
-                <th>Description</th>
+                <th>Genre</th>
                 <th>Cover</th>
-                <th>Uploadedbyid</th>
+                <th>Uploaded By</th>
                 <th>Upvotes</th>
                 <th>Actions</th>
             </tr>
@@ -23,11 +22,12 @@
                 <td><a href="{{ path('game_show', { 'id': game.id }) }}">{{ game.id }}</a></td>
                 <td>{{ game.title }}</td>
                 <td>{{ game.year }}</td>
-                <td>{{ game.genreId }}</td>
+                <td>{{ game.genre.name }}</td>
                 <td>{{ game.description }}</td>
-                <td>{{ game.cover }}</td>
-                <td>{{ game.uploadedById }}</td>
+                <td> <a href="{{ path('user_show', { 'id': game.uploadedBy.id }) }}">{{ game.uploadedBy.username }}</a></td>
                 <td>{{ game.upvotes }}</td>
+
+
                 <td>
                     <ul>
                         <li>

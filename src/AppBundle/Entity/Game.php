@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Game
  *
- * @ORM\Table(name="game")
+ * @ORM\Table(name="Game")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\GameRepository")
  */
 class Game
@@ -37,10 +37,12 @@ class Game
 
     /**
      * @var int
+     * Many Games have one Genre
+     * @ORM\ManyToOne(targetEntity="Genre", inversedBy="games")
+     * @ORM\JoinColumn(name="genre_id", referencedColumnName="id")
      *
-     * @ORM\Column(name="genre_id", type="integer")
      */
-    private $genreId;
+    private $genre;
 
     /**
      * @var string
@@ -58,10 +60,13 @@ class Game
 
     /**
      * @var int
-     *
-     * @ORM\Column(name="uploaded_by_id", type="integer")
+     * Many Games have one User.
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="games")
+     * @ORM\JoinColumn(name="uploaded_by_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="username", referencedColumnName="username")
+     * @return int
      */
-    private $uploadedById;
+    private $uploadedBy;
 
     /**
      * @var int
@@ -130,27 +135,27 @@ class Game
     }
 
     /**
-     * Set genreId
+     * Set genre
      *
-     * @param integer $genreId
+     * @param integer $genre
      *
      * @return Game
      */
-    public function setGenreId($genreId)
+    public function setGenre($genre)
     {
-        $this->genreId = $genreId;
+        $this->genre = $genre;
 
         return $this;
     }
 
     /**
-     * Get genreId
+     * Get genre
      *
      * @return int
      */
-    public function getGenreId()
+    public function getGenre()
     {
-        return $this->genreId;
+        return $this->genre;
     }
 
     /**
@@ -202,27 +207,27 @@ class Game
     }
 
     /**
-     * Set uploadedById
+     * Set uploadedBy
      *
-     * @param integer $uploadedById
+     * @param integer $uploadedBy
      *
      * @return Game
      */
-    public function setUploadedById($uploadedById)
+    public function setUploadedBy($uploadedBy)
     {
-        $this->uploadedById = $uploadedById;
+        $this->uploadedBy = $uploadedBy;
 
         return $this;
     }
 
     /**
-     * Get uploadedById
+     * Get uploadedBy
      *
      * @return int
      */
-    public function getUploadedById()
+    public function getUploadedBy()
     {
-        return $this->uploadedById;
+        return $this->uploadedBy;
     }
 
     /**
