@@ -1,14 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Game</h1>
 
-    <table>
+
+    <table style=" tr:hover background-color: #f5f5f5">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ game.id }}</td>
-            </tr>
+        <tr><h1>Game</h1></tr>
             <tr>
                 <th>Title</th>
                 <td>{{ game.title }}</td>
@@ -25,10 +22,7 @@
                 <th>Description</th>
                 <td>{{ game.description }}</td>
             </tr>
-            <tr>
-                <th>Cover</th>
-                <td>{{ game.cover }}</td>
-            </tr>
+
             <tr>
                 <th>Uploaded By</th>
                 <td>
@@ -40,8 +34,14 @@
                 <th>Upvotes</th>
                 <td>{{ game.upvotes }}</td>
             </tr>
+
+            <tr>
+                <img style="height: 25%; width: 30%;" src="{{ game.cover }}" alt="Symfony!" />
+            </tr>
         </tbody>
     </table>
+
+
 
     <ul>
         <li>

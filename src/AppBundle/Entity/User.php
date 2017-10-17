@@ -43,6 +43,14 @@ class User
      */
     private $email;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="role", type="string", length=20)
+     */
+    private $role;
+
     /**
      * @var string
      *
@@ -213,6 +221,22 @@ class User
     public function setGames($games)
     {
         $this->games = $games;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param string $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
     }
 
 
