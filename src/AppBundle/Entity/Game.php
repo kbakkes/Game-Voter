@@ -75,6 +75,12 @@ class Game
      */
     private $upvotes;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="downvotes", type="integer")
+     */
+    private $downvotes;
 
     /**
      * Get id
@@ -253,5 +259,23 @@ class Game
     {
         return $this->upvotes;
     }
+
+    /**
+     * @return int
+     */
+    public function getDownvotes()
+    {
+        return $this->downvotes;
+    }
+
+    /**
+     * @param int $downvotes
+     */
+    public function setDownvotes($downvotes)
+    {
+        $this->downvotes = $downvotes;
+    }
+
+
 }
 
