@@ -1,52 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    <h1>Games list</h1>
-
-    <table class="col-md-6">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Year</th>
-                <th>Genre</th>
-                <th>Cover</th>
-                <th>Uploaded By</th>
-                <th>Upvotes</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="col-md-3">
         {% for game in games %}
-            <tr>
-                <td><a href="{{ path('game_show', { 'id': game.id }) }}">{{ game.id }}</a></td>
-                <td>{{ game.title }}</td>
-                <td>{{ game.year }}</td>
-                <td>{{ game.genre.name }}</td>
-                <td>{{ game.description }}</td>
-                <td> <a href="{{ path('user_show', { 'id': game.uploadedBy.id }) }}">{{ game.uploadedBy.username }}</a></td>
-                <td>{{ game.upvotes }}</td>
+            <div class="row">
+                    <div class="thumbnail">
+                        <a href="{{ path('game_show', { 'id': game.id }) }}">
+                            <img src="{{ game.cover }}" alt="Game Cover">
+                        </a>
+                        <div class="caption">
+                            <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
+                            <p align="center">
+                                <a href="#" class="btn btn-success" role="button">
+                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>                                </a>
+                                <a href="#" class="btn btn-danger" role="button">
+                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>                                </a>
 
-
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('game_show', { 'id': game.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('game_edit', { 'id': game.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+                            </p>
+                        </div>
+                    </div>
+            </div>
         {% endfor %}
-        </tbody>
-    </table>
+        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('game_new') }}">Create a new game</a>
-        </li>
-    </ul>
 {% endblock %}
