@@ -33,7 +33,12 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">Login</a>
+                    {% if is_granted('ROLE_USER') %}
+
+                    {% else %}
+
+                    {% endif %}
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">

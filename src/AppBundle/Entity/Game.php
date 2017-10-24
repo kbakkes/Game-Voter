@@ -58,15 +58,6 @@ class Game
      */
     private $cover;
 
-    /**
-     * @var int
-     * Many Games have one User.
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="games")
-     * @ORM\JoinColumn(name="uploaded_by_id", referencedColumnName="id")
-     * @ORM\JoinColumn(name="username", referencedColumnName="username")
-     * @return int
-     */
-    private $uploadedBy;
 
     /**
      * @var int

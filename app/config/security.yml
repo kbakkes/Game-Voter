@@ -8,10 +8,8 @@ security:
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        db_provider:
-          entity:
-            class: AppBundle:User
-            property: username
+            fos_userbundle:
+                id: fos_user.user_provider.username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -21,6 +19,11 @@ security:
 
         main:
             anonymous: ~
+            logout: ~
+
+
             form_login:
-                login_path: login
-                check_path: login
+              csrf_token_generator: security.csrf.token_manager
+
+            remember_me:
+              secret: '%secret%'
