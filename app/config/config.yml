@@ -75,3 +75,6 @@ fos_user:
     from_email:
         address: "karim.bakkes@gmail.com"
         sender_name: "Karim Postman"
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationFormType
