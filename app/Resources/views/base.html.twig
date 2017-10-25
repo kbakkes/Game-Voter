@@ -22,9 +22,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Karim's coole gamesite</a>
+                <a class="navbar-brand" href="/">Karim's coole gamesite</a>
             </div>
 
+            {% if is_granted('ROLE_USER') %}
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -33,10 +34,8 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Login</a>
                     {% if is_granted('ROLE_USER') %}
-
-                    {% else %}
+                       <li><a href="{{ path('fos_user_security_logout')}}">Logout</a></li>
 
                     {% endif %}
                 </ul>
@@ -46,7 +45,13 @@
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
+                {% else %}
 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path('fos_user_registration_register')}}">Register</a></li>
+                        <li><a href="{{ path('fos_user_security_login')}}">Login</a></li>
+                    </ul>
+                {% endif %}
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
