@@ -4,24 +4,40 @@
     <div style="margin-left: 5%" class="row">
         {% for game in games %}
             <div class="col-md-3">
-
             <div class="thumbnail">
                         <a href="{{ path('game_show', { 'id': game.id }) }}">
-                            <img style="padding-bottom: 5%;" src="{{ game.cover }}" alt="Game Cover">
+                            <img style="height: 180px; width: 300px;" src="{{ game.cover }}" alt="Game Cover">
                         </a>
                         <div class="caption">
                             <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
-                            <p align="center">
-                                <a href="#" class="btn btn-success" role="button">
-                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  </a>
-                                <a href="#" class="btn btn-danger" role="button">
-                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>                                </a>
-
-                            </p>
+                            <hr />
                         </div>
+
+                    <table  align="center" >
+                        <tr>
+                            <th  style="padding-left: 15px; padding-right: 15px;">
+                                <a href="#" class="btn btn-success" role="button">
+                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                </a>
+                            </th>
+                            <th   style="padding-left: 15px; padding-right: 15px;">
+                                <a href="#" class="btn btn-danger" role="button">
+                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                </a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px;">
+                              {% game.upvotedgames|length %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                {#hier moet t in#}
                     </div>
             </div>
         {% endfor %}
         </div>
 
 {% endblock %}
+

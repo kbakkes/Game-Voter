@@ -35,12 +35,32 @@ class User extends BaseUser
      */
     private $lastname;
 
+    /**
+     * Many Users have Many Upvoters.
+     * @ORM\ManyToMany(targetEntity="Game", mappedBy="upvoters")
+     */
+    private $upvotedgames;
+
+    /**
+     * Many Users have Many Downvoters.
+     * @ORM\ManyToMany(targetEntity="Game", mappedBy="downvoters")
+     */
+    private $downvotedgames;
+
+
+    public function __construct() {
+        $this->upvotedgames = new ArrayCollection();
+        $this->downvotedgames = new ArrayCollection();
+
+    }
+
 
     /**
      * Get id
      *
      * @return int
      */
+
     public function getId()
     {
         return $this->id;

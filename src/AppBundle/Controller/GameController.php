@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 /**
  * Game controller.
  *
- * @Route("game")
+ * @Route("/")
  */
 class GameController extends Controller
 {
@@ -34,7 +34,7 @@ class GameController extends Controller
     /**
      * Creates a new game entity.
      *
-     * @Route("/new", name="game_new")
+     * @Route("/game/new", name="game_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +60,7 @@ class GameController extends Controller
     /**
      * Finds and displays a game entity.
      *
-     * @Route("/{id}", name="game_show")
+     * @Route("/game/{id}", name="game_show")
      * @Method("GET")
      */
     public function showAction(Game $game)
@@ -76,7 +76,7 @@ class GameController extends Controller
     /**
      * Displays a form to edit an existing game entity.
      *
-     * @Route("/{id}/edit", name="game_edit")
+     * @Route("/game/{id}/edit", name="game_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Game $game)
@@ -101,7 +101,7 @@ class GameController extends Controller
     /**
      * Deletes a game entity.
      *
-     * @Route("/{id}", name="game_delete")
+     * @Route("/game/{id}", name="game_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Game $game)

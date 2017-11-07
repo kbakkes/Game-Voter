@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -58,26 +59,30 @@ class Game
      */
     private $cover;
 
+    /**
+     * Many Games have many upvoters
+     * @ORM\ManyToMany(targetEntity="User", inversedBy="upvotedgames")
+     * * @ORM\JoinTable(name="game_upvoters")
+     */
+    protected $upvoters;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="upvotes", type="integer")
-     */
-    private $upvotes;
+     * Many Games have many downvoters
+     * @ORM\ManyToMany(targetEntity="User", inversedBy="downvotedgames")
+     * @ORM\JoinTable(name="game_downvoters")
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="downvotes", type="integer")
      */
-    private $downvotes;
+    protected $downvoters;
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
+
+
+
+    public function __construct() {
+        $this->upvoters = new ArrayCollection();
+        $this->downvoters = new ArrayCollection();
+
+    }
+
     public function getId()
     {
         return $this->id;
@@ -228,28 +233,21 @@ class Game
     }
 
     /**
-     * Set upvotes
-     *
-     * @param integer $upvotes
-     *
-     * @return Game
+     * @return mixed
      */
-    public function setUpvotes($upvotes)
+    public function getUpvoters()
     {
-        $this->upvotes = $upvotes;
-
-        return $this;
+        return $this->upvoters;
     }
 
     /**
-     * Get upvotes
-     *
-     * @return int
+     * @param mixed $upvoters
      */
-    public function getUpvotes()
+    public function setUpvoters($upvoters)
     {
-        return $this->upvotes;
+        $this->upvoters = $upvoters;
     }
+
 
     /**
      * @return int

@@ -21,7 +21,7 @@ class GameType extends AbstractType
     {
         $genre = "genre.id";
 
-        $builder->add('title')->add('year')->add('description')->add('cover')->add('upvotes');
+        $builder->add('title')->add('year')->add('description')->add('cover');
 
     }
     
