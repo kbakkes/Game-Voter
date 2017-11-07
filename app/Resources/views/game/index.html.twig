@@ -28,10 +28,14 @@
                         </tr>
                         <tr>
                             <td style="padding-left: 30px;">
-                              {% game.upvotedgames|length %}
-                                {% endfor %}
+                              {{ game.upvoters|length }}
                             </td>
+                            <td style="padding-left: 30px;">
+                                {{ game.downvoters|length }}
+                            </td>
+
                         </tr>
+
                     </table>
                 {#hier moet t in#}
                     </div>

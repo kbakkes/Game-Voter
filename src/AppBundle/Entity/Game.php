@@ -248,22 +248,22 @@ class Game
         $this->upvoters = $upvoters;
     }
 
-
     /**
-     * @return int
+     * @return mixed
      */
-    public function getDownvotes()
+    public function getDownvoters()
     {
-        return $this->downvotes;
+        return $this->downvoters;
     }
 
     /**
-     * @param int $downvotes
+     * @param mixed $downvoters
      */
-    public function setDownvotes($downvotes)
+    public function setDownvoters($downvoters)
     {
-        $this->downvotes = $downvotes;
+        $this->downvoters = $downvoters;
     }
+
 
 
 }
