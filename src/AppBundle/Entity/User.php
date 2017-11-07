@@ -36,6 +36,12 @@ class User extends BaseUser
     private $lastname;
 
     /**
+    * One User has many Games
+    * @ORM\OneToMany(targetEntity="Game", mappedBy="uploadedBy")
+    */
+    private $games;
+
+    /**
      * Many Users have Many Upvoters.
      * @ORM\ManyToMany(targetEntity="Game", mappedBy="upvoters")
      */
@@ -49,6 +55,7 @@ class User extends BaseUser
 
 
     public function __construct() {
+        $this->games = new ArrayCollection();
         $this->upvotedgames = new ArrayCollection();
         $this->downvotedgames = new ArrayCollection();
 

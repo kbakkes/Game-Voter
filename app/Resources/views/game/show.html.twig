@@ -2,10 +2,15 @@
 
 {% block body %}
 
+<div>
 
-    <table style=" tr:hover background-color: #f5f5f5">
+    <table class="table table-condensed" style="width: 45%; margin: 10%">
+
         <tbody>
-        <tr><h1>Game</h1></tr>
+        <tr>
+            <img src="{{ game.cover }}" alt="Symfony!" />
+
+        </tr>
             <tr>
                 <th>Title</th>
                 <td>{{ game.title }}</td>
@@ -32,15 +37,20 @@
             </tr>
             <tr>
                 <th>Upvotes</th>
-                <td>{{ game.upvotes }}</td>
+                <td>{{ game.upvoters|length }}</td>
             </tr>
-
             <tr>
-                <img style="height: 25%; width: 30%;" src="{{ game.cover }}" alt="Symfony!" />
+                <th>Downvotes</th>
+                <td>{{ game.downvoters|length }}</td>
             </tr>
         </tbody>
     </table>
-
+    <table>
+        <tr>
+            <a href="{{ path('game_index') }}">Back to the list</a>
+        </tr>
+    </table>
+</div>
 
 
     <ul>

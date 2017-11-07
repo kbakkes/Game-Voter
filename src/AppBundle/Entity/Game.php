@@ -60,6 +60,13 @@ class Game
     private $cover;
 
     /**
+     * Many game have one Uploader
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="games")
+     * @ORM\JoinColumn(name="uploaded_by_id", referencedColumnName="id")
+     */
+    protected $uploadedBy;
+
+    /**
      * Many Games have many upvoters
      * @ORM\ManyToMany(targetEntity="User", inversedBy="upvotedgames")
      * * @ORM\JoinTable(name="game_upvoters")
