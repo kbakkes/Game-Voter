@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Game;
 use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -31,6 +32,15 @@ class UserController extends Controller
         ));
     }
 
+//    public function showUserGamesAction(){
+//        $em = $this->getDoctrine()->getManager();
+//        $qb = $em->createQueryBuilder();
+//
+//        $results = $qb->
+//            ->from('MainCoreBundle:Event','e')
+//            ->where('e.addedOn >= :datetime');
+//    }
+
     /**
      * Creates a new user entity.
      *
@@ -56,7 +66,6 @@ class UserController extends Controller
             'form' => $form->createView(),
         ));
     }
-
     /**
      * Finds and displays a user entity.
      *
