@@ -2,7 +2,7 @@
 
 <div style="margin-left: 15%">
     <h1>Register</h1>
-
+<form class="form-horizontal">
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
    {{ form_row(form.username) }}
     {{ form_row(form.email) }}
@@ -14,4 +14,5 @@
     <input type="submit" class="btn btn-primary" value="{{ 'registration.submit'|trans }}" />
 </div>
 {{ form_end(form) }}
+    </form>
 </div>

@@ -43,6 +43,11 @@ class GameController extends Controller
     public function newAction(Request $request)
     {
         $game = new Game();
+
+        $game->setUploadedAt();
+        $currentUser = $this->get('security.token_storage')->getToken()->getUser();
+        $game->setUploadedBy($currentUser);
+
         $form = $this->createForm('AppBundle\Form\GameType', $game);
         $form->handleRequest($request);
 

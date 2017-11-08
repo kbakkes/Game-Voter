@@ -1,7 +1,7 @@
 <?php
 
 namespace AppBundle\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -67,6 +67,11 @@ class Game
     protected $uploadedBy;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $uploadedAt;
+
+    /**
      * Many Games have many upvoters
      * @ORM\ManyToMany(targetEntity="User", inversedBy="upvotedgames")
      * * @ORM\JoinTable(name="game_upvoters")
@@ -80,8 +85,6 @@ class Game
 
      */
     protected $downvoters;
-
-
 
 
     public function __construct() {
@@ -271,6 +274,21 @@ class Game
         $this->downvoters = $downvoters;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUploadedAt()
+    {
+        return $this->uploadedAt;
+    }
+
+    /**
+     * @param mixed $uploadedAt
+     */
+    public function setUploadedAt()
+    {
+        $this->uploadedAt = new \DateTime("now");
+    }
 
 
 }
