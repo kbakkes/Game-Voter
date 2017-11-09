@@ -33,6 +33,19 @@ class GameController extends Controller
         ));
     }
 
+    /**
+     * Adds user to upvote array
+     * @Route("/game/upvote/{id}", name="game_upvote")
+     * @Method("POST")
+     */
+    public function addToUpvoters(Game $game){
+        $currentUser = $this->get('security.token_storage')->getToken()->getUser();
+        $game->setUpvoters($currentUser);
+
+        return $this->redirectToRoute('game_index');
+
+    }
+
 
     /**
      * Creates a new game entity.

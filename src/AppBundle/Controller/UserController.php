@@ -31,16 +31,6 @@ class UserController extends Controller
             'users' => $users,
         ));
     }
-
-//    public function showUserGamesAction(){
-//        $em = $this->getDoctrine()->getManager();
-//        $qb = $em->createQueryBuilder();
-//
-//        $results = $qb->
-//            ->from('MainCoreBundle:Event','e')
-//            ->where('e.addedOn >= :datetime');
-//    }
-
     /**
      * Creates a new user entity.
      *

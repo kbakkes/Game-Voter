@@ -253,9 +253,9 @@ class Game
     /**
      * @param mixed $upvoters
      */
-    public function setUpvoters($upvoters)
+    public function setUpvoters($currentUser)
     {
-        $this->upvoters = $upvoters;
+        $this->upvoters->add($currentUser);
     }
 
     /**
