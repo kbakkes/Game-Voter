@@ -242,8 +242,9 @@ class Game
         return $this->uploadedBy;
     }
 
-    /**
-     * @return mixed
+
+     /**
+     * @return ArrayCollection|User[]
      */
     public function getUpvoters()
     {
@@ -277,7 +278,7 @@ class Game
     }
 
     /**
-     * @return mixed
+     * @return ArrayCollection|User[]
      */
     public function getDownvoters()
     {
@@ -326,6 +327,25 @@ class Game
         $this->uploadedAt = new \DateTime("now");
     }
 
-
+    /**
+     * @return boolean
+    */
+    public function isUpvoter(User $user)
+    {
+        if ($this->upvoters->contains($user)){
+            return true;
+        }
+        return false;
+    }
+    /**
+     * @return boolean
+     */
+    public function isDownvoter(User $user)
+    {
+        if ($this->downvoters->contains($user)){
+            return true;
+        }
+        return false;
+    }
 }
 

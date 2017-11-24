@@ -37,10 +37,21 @@ class GameController extends Controller
     }
 
     /**
- * Adds user to upvote array
- * @Route("/game/{id}/upvote", name="game_upvote")
- * @Method("POST")
- */
+     * Gets all upvoted users for an specific game
+     * @Route("/game/{id}/upvoters", name="game_upvoters")
+     */
+    public function showUpvoters(Game $game){
+        return $this->render('game/voters.html.twig', array(
+            'game' => $game,
+        ));
+    }
+
+
+    /**
+     * Adds user to upvote array
+     * @Route("/game/{id}/upvote", name="game_upvote")
+     * @Method("POST")
+     */
     public function addToUpvoters(Game $game){
         $em = $this->getDoctrine()->getManager();
 

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="margin-left: 5%">
+        <h1>Alle ratings voor {{ game.title }}</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for upvoters in game.upvoters %}
+            <tr>
+                <td>{{ upvoters.username }}</td>
+                <td></td>
+            </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+{% endblock %}
