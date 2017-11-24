@@ -3,11 +3,14 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Game;
+
 use AppBundle\Entity\Genre;
 use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 
 /**
  * Game controller.
@@ -34,16 +37,77 @@ class GameController extends Controller
     }
 
     /**
-     * Adds user to upvote array
-     * @Route("/game/upvote/{id}", name="game_upvote")
+ * Adds user to upvote array
+ * @Route("/game/{id}/upvote", name="game_upvote")
+ * @Method("POST")
+ */
+    public function addToUpvoters(Game $game){
+        $em = $this->getDoctrine()->getManager();
+
+        $currentUser = $this->get('security.token_storage')->getToken()->getUser();
+
+        $game->addUpvoter($currentUser);
+
+        $em->persist($game);
+
+        $em->flush();
+        return $this->redirectToRoute('game_index');
+    }
+
+    /**
+     * Adds user to downvote array
+     * @Route("/game/{id}/downvote", name="game_downvote")
      * @Method("POST")
      */
-    public function addToUpvoters(Game $game){
+    public function addToDownvoters(Game $game){
+        $em = $this->getDoctrine()->getManager();
+
         $currentUser = $this->get('security.token_storage')->getToken()->getUser();
-        $game->setUpvoters($currentUser);
 
+        $game->addDownvoter($currentUser);
+
+        $em->persist($game);
+
+        $em->flush();
         return $this->redirectToRoute('game_index');
+    }
 
+    /**
+     * @Route("/game/{id}/upvote/delete", name="game_remove_upvoter")
+     * @Method("DELETE")
+     */
+    public function removeUpvoter(Game $game)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $currentUser = $this->get('security.token_storage')->getToken()->getUser();
+
+        $game->deleteUpvoter($currentUser);
+
+        $em->persist($game);
+
+        $em->flush();
+
+        return new Response(null, 204);
+    }
+
+    /**
+     * @Route("/game/{id}/downvote/delete", name="game_remove_downvoter")
+     * @Method("DELETE")
+     */
+    public function removeDownvoter(Game $game)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $currentUser = $this->get('security.token_storage')->getToken()->getUser();
+
+        $game->deleteDownvoter($currentUser);
+
+        $em->persist($game);
+
+        $em->flush();
+
+        return new Response(null, 204);
     }
 
 
