@@ -253,9 +253,27 @@ class Game
     /**
      * @param mixed $upvoters
      */
-    public function setUpvoters($currentUser)
+    public function addUpvoter(User $user)
     {
-        $this->upvoters->add($currentUser);
+        if($this->upvoters->contains($user)){
+            return;
+        }
+        elseif ($this->downvoters->contains($user)){
+            $this->deleteDownvoter($user);
+        }
+
+        $this->upvoters[] = $user;
+    }
+
+    /**
+    * @param mixed $upvoters
+    */
+    public function deleteUpvoter(User $user)
+    {
+        if(!$this->upvoters->contains($user)){
+            return;
+        }
+        $this->upvoters->removeElement($user);
     }
 
     /**
@@ -269,9 +287,27 @@ class Game
     /**
      * @param mixed $downvoters
      */
-    public function setDownvoters($downvoters)
+    public function addDownvoter(User $user)
     {
-        $this->downvoters = $downvoters;
+        if($this->downvoters->contains($user)){
+            return;
+        }
+        elseif ($this->upvoters->contains($user)){
+            $this->deleteUpvoter($user);
+        }
+
+        $this->downvoters[] = $user;
+    }
+
+    /**
+     * @param mixed $upvoters
+     */
+    public function deleteDownvoter(User $user)
+    {
+        if(!$this->downvoters->contains($user)){
+            return;
+        }
+        $this->downvoters->removeElement($user);
     }
 
     /**

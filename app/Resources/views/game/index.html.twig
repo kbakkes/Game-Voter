@@ -16,14 +16,22 @@
                     <table  align="center" >
                         <tr>
                             <th  style="padding-left: 15px; padding-right: 15px;">
-                                <a href="{{controller('AppBundle:Game:upvote')}}" class="btn btn-success" role="button">
-                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                                </a>
+                                <form action="{{ path('game_upvote', {'id': game.id}) }}" method="POST" class="delete-button-form">
+                                 <input name="_method" value="POST" type="hidden">
+                                <button type="submit" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                </button>
+                                </form>
                             </th>
-                            <th   style="padding-left: 15px; padding-right: 15px;">
-                                <a href="#" class="btn btn-danger" role="button">
-                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                                </a>
+                            <th style="padding-left: 15px; padding-right: 15px;">
+                                <form action="{{ path('game_downvote', {'id': game.id}) }}" method="POST" class="delete-button-form">
+                                    <input name="_method" value="POST" type="hidden">
+                                    <button type="submit" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                    </button>
+                                </form>
+
+
                             </th>
                         </tr>
                         <tr>
