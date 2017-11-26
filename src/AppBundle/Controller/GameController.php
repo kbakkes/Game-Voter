@@ -46,8 +46,7 @@ class GameController extends Controller
         ));
     }
 
-
-    /**
+     /**
      * Adds user to upvote array
      * @Route("/game/{id}/upvote", name="game_upvote")
      * @Method("POST")
@@ -75,13 +74,14 @@ class GameController extends Controller
 
         $currentUser = $this->get('security.token_storage')->getToken()->getUser();
 
-        $game->addDownvoter($currentUser);
+        $game->addUpvoter($currentUser);
 
         $em->persist($game);
 
         $em->flush();
         return $this->redirectToRoute('game_index');
     }
+
 
     /**
      * @Route("/game/{id}/upvote/delete", name="game_remove_upvoter")
