@@ -2,6 +2,7 @@
 
 {% block body %}
     <div style="margin-left: 5%">
+        <a href="{{ path('game_show', { 'id': game.id }) }}">Back to {{ game.title }}</a>
         <h1>Alle ratings voor {{ game.title }}</h1>
 
         <table class="table">
@@ -12,12 +13,26 @@
             </tr>
             </thead>
             <tbody>
-            {% for upvoters in game.upvoters %}
-            <tr>
-                <td>{{ upvoters.username }}</td>
-                <td></td>
-            </tr>
-                {% endfor %}
+            {% for upvoter in game.upvoters %}
+                <tr>
+                    <td>{{ upvoter.username }}</td>
+                    <td>
+                        {% if game.upvoter(upvoter) %}
+                            <span style="color:green" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" />
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            {% for downvoter in game.downvoters %}
+                <tr>
+                    <td>{{ downvoter.username }}</td>
+                    <td>
+                        {% if not game.upvoter(downvoter) %}
+                            <span style="color:red" class="glyphicon glyphicon-thumbs-down" aria-hidden="true" />
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
             </tbody>
         </table>
 

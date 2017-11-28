@@ -337,15 +337,5 @@ class Game
         }
         return false;
     }
-    /**
-     * @return boolean
-     */
-    public function isDownvoter(User $user)
-    {
-        if ($this->downvoters->contains($user)){
-            return true;
-        }
-        return false;
-    }
 }
 
