@@ -3,15 +3,12 @@
 {% block body %}
 
 <div>
-
     <table class="table table-condensed" style="width: 45%; margin: 10%">
-
         <tbody>
         <tr>
             <img style="width: 250px; height: 200px; margin-left:  20%; margin-bottom: -8%"
                  class="img-thumbnail" src="{{ game.cover }}"
                  alt="Symfony!" />
-
         </tr>
             <tr>
                 <th>Title</th>
@@ -46,8 +43,10 @@
                 <td>{{ game.downvoters|length }}</td>
             </tr>
         <tr>
+            <th>
+                <a href="{{ path('game_upvoters', {'id': game.id }) }}">See voting details</a>
+            </th>
             <td>
-            <a href="{{ path('game_upvoters', {'id': game.id }) }}">See voting details</a>
             </td>
         </tr>
         </tbody>

@@ -60,6 +60,13 @@ class Game
     private $cover;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="enabled", type="boolean", options={"default":1})
+     */
+    private $enabled;
+
+    /**
      * Many game have one Uploader
      * @ORM\ManyToOne(targetEntity="User", inversedBy="games")
      * @ORM\JoinColumn(name="uploaded_by_id", referencedColumnName="id")
@@ -82,7 +89,6 @@ class Game
      * Many Games have many downvoters
      * @ORM\ManyToMany(targetEntity="User", inversedBy="downvotedgames")
      * @ORM\JoinTable(name="game_downvoters")
-
      */
     protected $downvoters;
 
@@ -337,5 +343,22 @@ class Game
         }
         return false;
     }
+
+    /**
+     * @return boolean
+     */
+    public function isEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param boolean $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
 }
 
