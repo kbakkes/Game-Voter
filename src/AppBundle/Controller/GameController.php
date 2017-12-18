@@ -46,6 +46,34 @@ class GameController extends Controller
         ));
     }
 
+    /**
+     * Gets all games from the current user
+     * @Route("/profile/games", name="current_user_games")
+     */
+    public function showMyGames(){
+        $em = $this->getDoctrine()->getManager();
+
+
+
+
+        $currentUser = $this->get('security.token_storage')->getToken()->getUser();
+        $game = new Game();
+        $user = $game->getUploader($currentUser);
+
+        $repository = $this->getDoctrine()->getRepository(Game::class);
+
+        $games = $repository->findBy(
+            array('uploadedBy' => $user ),
+            array('uploadedAt' => 'ASC'));
+
+
+        // query builder  return games where uploaded by id = currentuser
+        return $this->render(':game:mygames.html.twig', array(
+            'games' => $games,
+            'user' => $currentUser,
+        ));
+    }
+
 
     /**
      * Adds user to upvote array

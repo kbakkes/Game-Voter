@@ -1,5 +1,8 @@
 {% trans_default_domain 'FOSUserBundle' %}
+<a style="margin-left: 5%" href="{{ path('game_new') }}">Upload new game image</a>
 <div style="width: 45%; margin: 5%">
+
+
     <h2>{{ user.username }}</h2>
         <table class="table table-condensed">
             <tbody>
@@ -25,7 +28,7 @@
             </tr>
             <tr>
                 <th>
-                <a href="#">See uploaded games</a>
+                <a href={{ path('current_user_games') }}>See uploaded games</a>
                 </th>
                 <td></td>
             </tr>

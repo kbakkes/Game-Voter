@@ -2,6 +2,34 @@
 
 
 {% block body %}
+<h2>{{ user.username }}'s Games</h2>
 
+    <table class="table table-condensed">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Genre</th>
+            <th>Enabled</th>
+            <th>Details</th>
+            <th>Edit</th>
+        </tr>
+        {% for game in games %}
+        <tr>
+            <td>{{ game.title }}</td>
+            <td>{{ game.year }}</td>
+            <td>{{ game.genre.name }}</td>
+            <td>{{ game.enabled ? 'Yes':'No' }}</td>
+            <td>
+                <a href="{{ path('game_show', { 'id': game.id }) }}">Details</a>
+            </td>
+            <td>
+                <a href="{{ path('game_edit', { 'id': game.id }) }}">Edit</a>
+            </td>
+
+
+        </tr>
+            {% endfor %}
+
+    </table>
 
 {% endblock %}

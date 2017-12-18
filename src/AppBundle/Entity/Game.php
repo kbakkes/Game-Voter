@@ -249,6 +249,17 @@ class Game
     }
 
 
+    /**
+     * Get uploadedBy
+     *
+     * @return int
+     */
+    public function getUploader(User $user)
+    {
+       return $user->getId();
+    }
+
+
      /**
      * @return ArrayCollection|User[]
      */

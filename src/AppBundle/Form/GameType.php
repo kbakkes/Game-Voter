@@ -23,12 +23,16 @@ class GameType extends AbstractType
             ->add('year')
             ->add('description')
             ->add('cover')
+
             ->add('genre', EntityType::class, array(
                 'class' => 'AppBundle:Genre',
                 'choice_label' => function ($genre) {
                     return $genre->getName();
                 }
             ));
+            $builder->add('enabled', null, array(
+            'empty_data' => '1',
+        ));
     }
     
     /**
