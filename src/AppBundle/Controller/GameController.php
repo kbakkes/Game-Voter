@@ -240,6 +240,15 @@ class GameController extends Controller
         return $this->redirectToRoute('current_user_games');
     }
 
+    /**
+     * Redirects back to the homepage
+     * @Route("/game/redirect", name="game_redirect")
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function redirectAction()
+    {
+        return $this->redirectToRoute('game_index');
+    }
 
     /**
      * Deletes a game entity.

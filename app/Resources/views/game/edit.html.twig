@@ -20,5 +20,7 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    {% else %}
+        <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
 {% endif %}
 {% endblock %}

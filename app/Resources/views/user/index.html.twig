@@ -46,5 +46,7 @@
             <a href="{{ path('user_new') }}">Create a new user</a>
         </li>
     </ul>
+{% else %}
+    <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
 {% endif %}
 {% endblock %}
