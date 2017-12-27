@@ -105,7 +105,19 @@ class User extends BaseUser
         $this->lastname = $lastname;
     }
 
-    
+    /**
+     * @param User $currentUser
+     * @return bool
+     */
+    public function isUserAllowed(User $currentUser)
+    {
+        if($this->getId() === $currentUser->getId()){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
 
 

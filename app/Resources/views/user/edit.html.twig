@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+{% if is_granted('ROLE_ADMIN') or user.userAllowed(app.user) %}
+
     <h1>User edit</h1>
 
     {{ form_start(edit_form) }}
@@ -18,4 +20,9 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+
+{% else %}
+    <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
+
+{% endif %}
 {% endblock %}
