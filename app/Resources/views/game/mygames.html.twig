@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}
 
 {% block body %}
 <h2>{{ user.username }}'s Games</h2>
@@ -9,7 +13,10 @@
             <th>Title</th>
             <th>Year</th>
             <th>Genre</th>
+            <th>Likes</th>
+            <th>Dislikes</th>
             <th>Enabled</th>
+            <th>Created At</th>
             <th>Details</th>
             <th>Edit</th>
         </tr>
@@ -18,7 +25,14 @@
             <td>{{ game.title }}</td>
             <td>{{ game.year }}</td>
             <td>{{ game.genre.name }}</td>
-            <td>{{ game.enabled ? 'Yes':'No' }}</td>
+            <td>{{ game.upvoters|length }}</td>
+            <td>{{ game.downvoters|length }}</td>
+            <td>
+                <a href="{{ path('game_change_status', { 'id': game.id }) }}" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{ game.id }}">
+                    <input type="checkbox" id="{{ game.id }}" class="mdl-switch__input" {{ game.enabled ? 'checked':'' }}>
+                </a>
+            </td>
+            <td>{{ game.uploadedAt|date('d-m-Y') }}</td>
             <td>
                 <a href="{{ path('game_show', { 'id': game.id }) }}">Details</a>
             </td>

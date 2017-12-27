@@ -6,6 +6,7 @@ use AppBundle\Entity\Game;
 
 use AppBundle\Entity\Genre;
 use AppBundle\Entity\User;
+use AppBundle\Form\GameType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -52,8 +53,6 @@ class GameController extends Controller
      */
     public function showMyGames(){
         $em = $this->getDoctrine()->getManager();
-
-
 
 
         $currentUser = $this->get('security.token_storage')->getToken()->getUser();
@@ -222,6 +221,25 @@ class GameController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+
+
+    /**
+     * @param Game $game
+     * @Route("/game/change-status/{id}", name="game_change_status")
+     * @return \Symfony\Component\Form\Form The form
+     */
+    public function changeStatusAction(Game $game)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $game->changeStatus();
+
+        $em->persist($game);
+        $em->flush();
+
+        return $this->redirectToRoute('current_user_games');
+    }
+
 
     /**
      * Deletes a game entity.

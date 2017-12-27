@@ -15,7 +15,9 @@
             <tbody>
             {% for upvoter in game.upvoters %}
                 <tr>
-                    <td>{{ upvoter.username }}</td>
+                    <td>
+                        <a href="{{ path('user_show', { 'id': upvoter.id }) }}"> {{ upvoter.username }}</a>
+                    </td>
                     <td>
                         {% if game.upvoter(upvoter) %}
                             <span style="color:green" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" />

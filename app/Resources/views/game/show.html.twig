@@ -18,6 +18,7 @@
                 <th>Year</th>
                 <td>{{ game.year }}</td>
             </tr>
+
             <tr>
                 <th>Genre</th>
                 <td>{{ game.genre.name }}</td>
@@ -42,6 +43,10 @@
                 <th>Downvotes</th>
                 <td>{{ game.downvoters|length }}</td>
             </tr>
+            <tr>
+                <th>Uploaded At</th>
+                <td>{{ game.uploadedAt|date('d-m-Y') }}</td>
+            </tr>
         <tr>
             <th>
                 <a href="{{ path('game_upvoters', {'id': game.id }) }}">See voting details</a>
@@ -58,18 +63,17 @@
     </table>
 </div>
 
-
-    <ul>
-        <li>
-            <a href="{{ path('game_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('game_edit', { 'id': game.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
+    {% if game.isUploader(app.user) %}
+        <ul>
+            <li>
+                <a href="{{ path('game_edit', { 'id': game.id }) }}">Edit</a>
+            </li>
+            <li>
+                {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+                {{ form_end(delete_form) }}
+            </li>
+        </ul>
+    {% endif %}
+
 {% endblock %}

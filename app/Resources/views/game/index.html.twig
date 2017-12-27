@@ -3,6 +3,13 @@
 {% block body %}
     <div style="margin-left: 5%" class="row">
         {% for game in games %}
+
+
+
+
+
+
+        {% if is_granted('ROLE_USER') %}
             <div class="col-md-3">
             <div class="thumbnail">
                         <a href="{{ path('game_show', { 'id': game.id }) }}">
@@ -45,6 +52,7 @@
                     </table>
                     </div>
             </div>
+        {% endif %}
         {% endfor %}
         </div>
 

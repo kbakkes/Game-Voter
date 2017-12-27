@@ -371,5 +371,28 @@ class Game
         $this->enabled = $enabled;
     }
 
+    /**
+     * @param $user
+     * @return bool
+     */
+    public function isUploader(User $user)
+    {
+        if($this->getUploadedBy()->getId() === $user->getId()) {
+            return true;
+        }
+        return false;
+    }
+
+
+    public function changeStatus()
+    {
+        if($this->isEnabled()){
+            $this->setEnabled(false);
+        }
+        else {
+            $this->setEnabled(true);
+        }
+    }
+
 }
 
