@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if is_granted('ROLE_ADMIN') %}
+
+<h1>Genres list</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for genre in genres %}
+            <tr>
+                <td>
+                        {{ genre.id }}
+                </td>
+                <td>
+                    <a href="{{ path('game_index_genre', { 'genre': genre.id}) }}">
+                    {{ genre.name }}
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ path('genre_edit', { 'id': genre.id }) }}">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('genre_new') }}">Create a new genre</a>
+        </li>
+    </ul>
+{% else %}
+<div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
+{% endif %}
+{% endblock %}

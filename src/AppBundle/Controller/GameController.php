@@ -28,11 +28,33 @@ class GameController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository(Game::class);
 
-        $games = $em->getRepository('AppBundle:Game')->findAll();
+        $games = $repository->findBy(
+            array('enabled' => true ));
 
         return $this->render('game/index.html.twig', array(
+            'games' => $games,
+        ));
+    }
+
+
+    /**
+     * Lists all game entities for a specific genre
+     *
+     * @param Genre $genre
+     * @Route("/genre/{genre}", name="game_index_genre")
+     * @Method("GET")
+     * @return Response
+     */
+    public function indexGenreAction(Genre $genre)
+    {
+        $repository = $this->getDoctrine()->getRepository(Game::class);
+
+        $games = $repository->findBy(
+            array('genre' => $genre ));
+
+        return $this->render(':game:filtered.html.twig', array(
             'games' => $games,
         ));
     }

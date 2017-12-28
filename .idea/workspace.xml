@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52be1c65-2792-4b2d-9a35-01f675cf6fef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/user/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/user/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/game/filtered.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/game/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/game/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/user/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/user/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
     </list>
     <ignored path="s0910135.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,81 +30,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/game/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#924#933#0#Twig" expanded="true" />
-                <element signature="e#1487#1500#0#Twig" expanded="true" />
-                <element signature="e#1700#1710#0#Twig" expanded="true" />
-                <element signature="e#1876#1885#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="244" column="53" selection-start-line="244" selection-start-column="53" selection-end-line="244" selection-end-column="53" />
-              <folding>
-                <element signature="e#40#66#0#PHP" expanded="true" />
-                <element signature="e#755#771#1#PHP" expanded="true" />
-                <element signature="e#1848#1873#0#PHP" expanded="true" />
-                <element signature="e#2411#2423#1#PHP" expanded="true" />
-                <element signature="e#5673#5684#0#PHP" expanded="true" />
-                <element signature="e#6338#6358#1#PHP" expanded="true" />
-                <element signature="e#6623#6635#1#PHP" expanded="true" />
-                <element signature="e#7146#7158#1#PHP" expanded="true" />
-                <element signature="e#7480#7493#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/game/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-                <element signature="e#302#312#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="451">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="6" />
               <folding>
+                <element signature="e#40#66#0#PHP" expanded="true" />
+                <element signature="e#652#668#1#PHP" expanded="true" />
+                <element signature="e#712#734#0#PHP" expanded="true" />
                 <element signature="e#1324#1335#0#PHP" expanded="true" />
                 <element signature="e#3583#3596#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/user/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#865#874#0#Twig" expanded="true" />
-                <element signature="e#1014#1023#0#Twig" expanded="true" />
-                <element signature="e#1163#1174#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,18 +54,77 @@
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#335#345#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/genre/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="24" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#508#524#0#Twig" expanded="true" />
+                <element signature="e#697#707#0#Twig" expanded="true" />
+                <element signature="e#996#1005#0#Twig" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/game/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="390">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#273#282#0#Twig" expanded="true" />
+                <element signature="e#634#650#0#Twig" expanded="true" />
+                <element signature="e#1080#1091#0#Twig" expanded="true" />
+                <element signature="e#1679#1692#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filtered.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/game/filtered.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#70#80#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#362#371#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1147#1158#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1793#1806#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mygames.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#397#405#0#Twig" expanded="true" />
+                <element signature="e#869#878#0#Twig" expanded="true" />
+                <element signature="e#1229#1247#0#Twig" expanded="true" />
+                <element signature="e#1562#1571#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,19 +143,26 @@
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/game/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/EnableGameType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Game.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/game/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/game/voters.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/game/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/GenreController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/genre/edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/genre/new.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/genre/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/game/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/game/filtered.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/user/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/genre/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig" />
       </list>
     </option>
   </component>
@@ -263,6 +271,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -285,7 +319,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,6 +407,58 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="security" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genre" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="game" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -403,6 +489,66 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOSUserBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Registration" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s0910135" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOSUserBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Profile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -410,7 +556,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="gamecontr&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Controller/GameController.php&#10;Gameco&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Controller/GameController.php&#10;confirm&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig&#10;game&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Entity/Game.php&#10;Usermana&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php&#10;Usermanager&#9;null&#9;null&#10;RegistrationCo&#9;null&#9;null&#10;workspace&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/.idea/workspace.xml" />
+    <property name="SearchEverywhereHistoryKey" value="game&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Controller/GameController.php&#10;Genret&#9;null&#9;null&#10;User&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Controller/UserController.php&#10;gamecontr&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Controller/GameController.php&#10;Gameco&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/src/AppBundle/Controller/GameController.php&#10;confirm&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig&#10;Usermana&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php&#10;Usermanager&#9;null&#9;null&#10;RegistrationCo&#9;null&#9;null&#10;workspace&#9;FILE&#9;file:///Users/Karim/Documents/Projecten/s0910135/.idea/workspace.xml" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="FullScreen" value="true" />
   </component>
@@ -478,12 +624,12 @@
       <workItem from="1511700658458" duration="8595000" />
       <workItem from="1512489124010" duration="1776000" />
       <workItem from="1513009449994" duration="7365000" />
-      <workItem from="1514377554370" duration="11194000" />
+      <workItem from="1514377554370" duration="21038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28930000" />
+    <option name="totallyTimeSpent" value="38774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -495,7 +641,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5178082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31232876" sideWeight="0.49710503" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30821916" sideWeight="0.49710503" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -527,91 +673,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-          <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
-            <element signature="e#755#771#1#PHP" expanded="true" />
-            <element signature="e#1848#1873#0#PHP" expanded="true" />
-            <element signature="e#2411#2423#1#PHP" expanded="true" />
-            <element signature="e#5673#5684#0#PHP" expanded="true" />
-            <element signature="e#6338#6358#1#PHP" expanded="true" />
-            <element signature="e#6623#6635#1#PHP" expanded="true" />
-            <element signature="e#7146#7158#1#PHP" expanded="true" />
-            <element signature="e#7480#7493#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
-          <folding>
-            <element signature="e#2482#2493#0#PHP" expanded="false" />
-            <element signature="e#3583#3596#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5415">
-          <caret line="361" column="0" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
-            <element signature="e#755#771#1#PHP" expanded="true" />
-            <element signature="e#1848#1873#0#PHP" expanded="true" />
-            <element signature="e#2411#2423#1#PHP" expanded="true" />
-            <element signature="e#5673#5684#0#PHP" expanded="true" />
-            <element signature="e#6338#6358#1#PHP" expanded="true" />
-            <element signature="e#6623#6635#1#PHP" expanded="true" />
-            <element signature="e#7146#7158#1#PHP" expanded="true" />
-            <element signature="e#7480#7493#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#299#348#0#PHP" expanded="false" />
-            <element signature="e#2514#2547#1#PHP" expanded="false" />
-            <element signature="e#3098#3140#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-          <folding>
-            <element signature="e#904#922#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/game/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -645,7 +706,7 @@
         <state relative-caret-position="60">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <element signature="e#12#26#0#Twig" expanded="false" />
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,14 +725,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#40#66#0#PHP" expanded="true" />
-            <element signature="e#755#771#1#PHP" expanded="true" />
-            <element signature="e#1848#1873#0#PHP" expanded="true" />
-            <element signature="e#2411#2423#1#PHP" expanded="true" />
-            <element signature="e#5673#5684#0#PHP" expanded="true" />
-            <element signature="e#6338#6358#1#PHP" expanded="true" />
-            <element signature="e#6623#6635#1#PHP" expanded="true" />
-            <element signature="e#7146#7158#1#PHP" expanded="true" />
-            <element signature="e#7480#7493#0#PHP" expanded="true" />
+            <element signature="e#849#871#0#PHP" expanded="true" />
+            <element signature="e#1374#1400#0#PHP" expanded="true" />
+            <element signature="e#1660#1683#0#PHP" expanded="true" />
+            <element signature="e#2411#2436#0#PHP" expanded="true" />
+            <element signature="e#2974#2986#1#PHP" expanded="true" />
+            <element signature="e#3448#3460#1#PHP" expanded="true" />
+            <element signature="e#6236#6247#0#PHP" expanded="true" />
+            <element signature="e#6901#6921#1#PHP" expanded="true" />
+            <element signature="e#7186#7198#1#PHP" expanded="true" />
+            <element signature="e#7709#7721#1#PHP" expanded="true" />
+            <element signature="e#8043#8056#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,7 +745,7 @@
         <state relative-caret-position="60">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <element signature="e#12#26#0#Twig" expanded="false" />
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,14 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="572" column="8" selection-start-line="572" selection-start-column="8" selection-end-line="572" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,20 +803,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding>
-            <element signature="e#303#313#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOSUserEvents.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-780">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -784,29 +831,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="e#152#182#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
           <folding>
-            <element signature="e#904#922#0#Twig" expanded="false" />
+            <element signature="e#7#259#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -816,19 +846,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#287#296#0#Twig" expanded="false" />
-            <element signature="e#876#887#0#Twig" expanded="false" />
-            <element signature="e#1475#1488#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,49 +865,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/GenreType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="206" column="18" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" column="90" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="90" />
-          <folding>
-            <element signature="e#1401#1411#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="e#1023#1041#0#Twig" expanded="true" />
-            <element signature="e#1412#1421#0#Twig" expanded="true" />
-            <element signature="e#1528#1537#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,29 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/voters.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-          <folding>
-            <element signature="e#553#562#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#865#874#0#Twig" expanded="true" />
-            <element signature="e#1014#1023#0#Twig" expanded="true" />
-            <element signature="e#1163#1174#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -960,15 +916,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        <state relative-caret-position="15">
+          <caret line="1" column="71" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="false" />
+            <element signature="e#85#93#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#924#933#0#Twig" expanded="true" />
+            <element signature="e#302#312#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/voters.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#553#562#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/GenreType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/GenreControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GenreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#632#649#1#PHP" expanded="true" />
+            <element signature="e#693#716#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/genre/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/genre/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="15" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/genre/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#1487#1500#0#Twig" expanded="true" />
             <element signature="e#1700#1710#0#Twig" expanded="true" />
             <element signature="e#1876#1885#0#Twig" expanded="true" />
@@ -976,14 +1039,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#302#312#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding>
+            <element signature="e#129#139#0#Twig" expanded="true" />
+            <element signature="e#202#212#0#Twig" expanded="true" />
+            <element signature="e#275#286#0#Twig" expanded="true" />
+            <element signature="e#734#743#0#Twig" expanded="true" />
+            <element signature="e#1091#1100#0#Twig" expanded="true" />
+            <element signature="e#1240#1249#0#Twig" expanded="true" />
+            <element signature="e#1389#1400#0#Twig" expanded="true" />
+            <element signature="e#1637#1645#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding>
+            <element signature="e#855#865#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <element signature="e#40#66#0#PHP" expanded="true" />
+            <element signature="e#652#668#1#PHP" expanded="true" />
+            <element signature="e#712#734#0#PHP" expanded="true" />
+            <element signature="e#1324#1335#0#PHP" expanded="true" />
+            <element signature="e#3583#3596#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/filtered.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#70#80#0#Twig" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#362#371#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1147#1158#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1793#1806#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding>
+            <element signature="e#1401#1411#0#Twig" expanded="true" />
+            <element signature="e#1474#1492#0#Twig" expanded="true" />
+            <element signature="e#1718#1728#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#40#66#0#PHP" expanded="true" />
+            <element signature="e#849#871#0#PHP" expanded="true" />
+            <element signature="e#1374#1400#0#PHP" expanded="true" />
+            <element signature="e#1660#1683#0#PHP" expanded="true" />
+            <element signature="e#2411#2436#0#PHP" expanded="true" />
+            <element signature="e#2974#2986#1#PHP" expanded="true" />
+            <element signature="e#3448#3460#1#PHP" expanded="true" />
+            <element signature="e#6236#6247#0#PHP" expanded="true" />
+            <element signature="e#6901#6921#1#PHP" expanded="true" />
+            <element signature="e#7186#7198#1#PHP" expanded="true" />
+            <element signature="e#7709#7721#1#PHP" expanded="true" />
+            <element signature="e#8043#8056#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -995,36 +1158,48 @@
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#335#345#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#273#282#0#Twig" expanded="true" />
+            <element signature="e#634#650#0#Twig" expanded="true" />
+            <element signature="e#1080#1091#0#Twig" expanded="true" />
+            <element signature="e#1679#1692#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/genre/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#508#524#0#Twig" expanded="true" />
+            <element signature="e#697#707#0#Twig" expanded="true" />
+            <element signature="e#996#1005#0#Twig" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/mygames.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="244" column="53" selection-start-line="244" selection-start-column="53" selection-end-line="244" selection-end-column="53" />
+        <state relative-caret-position="363">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
           <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
-            <element signature="e#755#771#1#PHP" expanded="true" />
-            <element signature="e#1848#1873#0#PHP" expanded="true" />
-            <element signature="e#2411#2423#1#PHP" expanded="true" />
-            <element signature="e#5673#5684#0#PHP" expanded="true" />
-            <element signature="e#6338#6358#1#PHP" expanded="true" />
-            <element signature="e#6623#6635#1#PHP" expanded="true" />
-            <element signature="e#7146#7158#1#PHP" expanded="true" />
-            <element signature="e#7480#7493#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#1324#1335#0#PHP" expanded="true" />
-            <element signature="e#3583#3596#0#PHP" expanded="true" />
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#397#405#0#Twig" expanded="true" />
+            <element signature="e#869#878#0#Twig" expanded="true" />
+            <element signature="e#1229#1247#0#Twig" expanded="true" />
+            <element signature="e#1562#1571#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

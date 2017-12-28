@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if is_granted('ROLE_ADMIN') %}
+
+        <h1>Genre creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('genre_index') }}">Back to the list</a>
+        </li>
+    </ul>
+    {% else %}
+        <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
+    {% endif %}
+{% endblock %}

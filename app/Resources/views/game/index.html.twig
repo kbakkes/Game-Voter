@@ -3,27 +3,27 @@
 {% block body %}
     <div style="margin-left: 5%" class="row">
         {% for game in games %}
-
-
-
-
-
-
         {% if is_granted('ROLE_USER') %}
-            <div class="col-md-3">
+            <div class="col-md-4">
             <div class="thumbnail">
-                        <a href="{{ path('game_show', { 'id': game.id }) }}">
-                            <img style="height: 180px; width: 300px;" src="{{ game.cover }}" alt="Game Cover">
+                <a href="{{ path('game_show', { 'id': game.id }) }}">
+                    <img style="height: 200px; width: 320px;" src="{{ game.cover }}" alt="Game Cover">
+                </a>
+                <div class="caption">
+                    <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
+                    <div align="center">
+                        <a href="{{ path('game_index_genre', { 'genre': game.genre.id}) }}">
+                            <span class="label label-default">{{ game.genre.name }}</span>
                         </a>
-                        <div class="caption">
-                            <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
-                            <hr />
-                        </div>
+                    </div>
 
-                    <table  align="center" >
-                        <tr>
-                            <th  style="padding-left: 15px; padding-right: 15px;">
-                                <form action="{{ path('game_upvote', {'id': game.id}) }}" method="POST" class="delete-button-form">
+                    <hr />
+                </div>
+
+                <table  align="center" >
+                    <tr>
+                        <th  style="padding-left: 15px; padding-right: 15px;">
+                            <form action="{{ path('game_upvote', {'id': game.id}) }}" method="POST" class="delete-button-form">
                                  <input name="_method" value="POST" type="hidden">
                                 <button type="submit" class="btn btn-success">
                                     <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
@@ -52,6 +52,16 @@
                     </table>
                     </div>
             </div>
+            {% else %}
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img style="height: 200px; width: 320px;" src="{{ game.cover }}" alt="Game Cover">
+                        </a>
+                        <div class="caption">
+                            <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
+                        </div>
+                    </div>
+                </div>
         {% endif %}
         {% endfor %}
         </div>

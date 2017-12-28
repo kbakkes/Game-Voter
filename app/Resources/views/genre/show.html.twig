@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if is_granted('ROLE_ADMIN') %}
+<h1>Genre</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ genre.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ genre.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('genre_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('genre_edit', { 'id': genre.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    {% else %}
+        <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
+    {% endif %}
+{% endblock %}

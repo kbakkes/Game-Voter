@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <a href="{{ path('game_index') }}">Go Back to all games</a>
+
+    <div style="margin-left: 5%" class="row">
+
+        {% for game in games %}
+            {% if is_granted('ROLE_USER') %}
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="{{ path('game_show', { 'id': game.id }) }}">
+                            <img style="height: 200px; width: 320px;" src="{{ game.cover }}" alt="Game Cover">
+                        </a>
+                        <div class="caption">
+                            <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
+                            <div align="center">
+                                <span class="label label-default">{{ game.genre.name }}</span>
+                            </div>
+
+                            <hr />
+                        </div>
+
+                        <table  align="center" >
+                            <tr>
+                                <th  style="padding-left: 15px; padding-right: 15px;">
+                                    <form action="{{ path('game_upvote', {'id': game.id}) }}" method="POST" class="delete-button-form">
+                                        <input name="_method" value="POST" type="hidden">
+                                        <button type="submit" class="btn btn-success">
+                                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                        </button>
+                                    </form>
+                                </th>
+                                <th style="padding-left: 15px; padding-right: 15px;">
+                                    <form action="{{ path('game_downvote', {'id': game.id}) }}" method="POST" class="delete-button-form">
+                                        <input name="_method" value="POST" type="hidden">
+                                        <button type="submit" class="btn btn-danger">
+                                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                        </button>
+                                    </form>
+
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 30px;">
+                                    {{ game.upvoters|length }}
+                                </td>
+                                <td style="padding-left: 30px;">
+                                    {{ game.downvoters|length }}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

@@ -2,7 +2,11 @@
 
 {% block body %}
 {% if is_granted('ROLE_ADMIN') %}
-<h1>Users list</h1>
+    <a style="margin-left: 5%" href="{{ path('user_index') }}">Users</a>
+    <a style="margin-left: 5%" href="{{ path('game_index') }}">Games</a>
+    <a style="margin-left: 5%" href="{{ path('genre_index') }}">Genres</a>
+
+    <h1>Users list</h1>
 
     <table class="table table-hover">
         <thead>
