@@ -2,8 +2,8 @@
 
 {% block body %}
     <div style="margin-left: 5%" class="row">
-        {% for game in games %}
         {% if is_granted('ROLE_USER') %}
+            {% for game in games %}
             <div class="col-md-4">
             <div class="thumbnail">
                 <a href="{{ path('game_show', { 'id': game.id }) }}">
@@ -50,20 +50,21 @@
                             </td>
                         </tr>
                     </table>
-                    </div>
+                </div>
             </div>
-            {% else %}
-                <div class="col-md-4">
+            {% endfor %}
+        {% else %}
+        {% for game in randomGames %}
+             <div class="col-md-5">
                     <div class="thumbnail">
-                        <img style="height: 200px; width: 320px;" src="{{ game.cover }}" alt="Game Cover">
-                        </a>
+                        <img style="height: 220px; width: 360px;" src="{{ game.cover }}" alt="Game Cover">
                         <div class="caption">
                             <h3  align="center">{{ game.title }} ({{ game.year }})</h3>
                         </div>
                     </div>
                 </div>
-        {% endif %}
         {% endfor %}
+        {% endif %}
         </div>
 
 {% endblock %}

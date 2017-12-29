@@ -5,8 +5,6 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Game;
 
 use AppBundle\Entity\Genre;
-use AppBundle\Entity\User;
-use AppBundle\Form\GameType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -28,13 +26,19 @@ class GameController extends Controller
      */
     public function indexAction()
     {
+        $randomGames = [];
         $repository = $this->getDoctrine()->getRepository(Game::class);
 
         $games = $repository->findBy(
             array('enabled' => true ));
 
+            $random = array_rand($games,2);
+            array_push($randomGames, $games[$random[0]]);
+            array_push($randomGames, $games[$random[1]]);
+
         return $this->render('game/index.html.twig', array(
             'games' => $games,
+            'randomGames' => $randomGames,
         ));
     }
 
@@ -43,7 +47,7 @@ class GameController extends Controller
      * Lists all game entities for a specific genre
      *
      * @param Genre $genre
-     * @Route("/genre/{genre}", name="game_index_genre")
+     * @Route("/games/genre/{genre}", name="game_index_genre")
      * @Method("GET")
      * @return Response
      */

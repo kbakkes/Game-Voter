@@ -2,22 +2,21 @@
 
 {% block body %}
     <h1>User {{ user.username }}</h1>
-
-    <table>
+{% if is_granted('ROLE_USER') %}
+    <table class="table table-hover">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
             <tr>
                 <th>Username</th>
                 <td>{{ user.username }}</td>
             </tr>
+            {% if is_granted('ROLE_ADMIN') or user.userAllowed(app.user) %}
+
             <tr>
                 <th>Password</th>
                 <td>******</td>
             </tr>
-            <tr>
+            {% endif %}
+    <tr>
                 <th>Lastname</th>
                 <td>{{ user.lastname }}</td>
             </tr>
@@ -32,6 +31,7 @@
         </tbody>
     </table>
 
+    {% elseif is_granted('ROLE_ADMIN') or user.userAllowed(app.user) %}
 
     <ul>
         <li>
@@ -46,4 +46,8 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+{% else %}
+    <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
+
+{% endif %}
 {% endblock %}

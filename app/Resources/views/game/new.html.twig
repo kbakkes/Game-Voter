@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div style="margin-left: 5%">
+        {% if is_granted('ROLE_ADMIN') %}
+
+<div style="margin-left: 5%">
     <h1>Upload new game image</h1>
 
     {{ form_start(form) }}
@@ -15,4 +17,7 @@
         </li>
     </ul>
     </div>
+        {% else %}
+            <div style="margin-top: -1.6%;" class="alert alert-danger" role="alert"><h1>⛔ 403 Forbidden ⛔       🙄️</h1></div>
+        {% endif %}
 {% endblock %}

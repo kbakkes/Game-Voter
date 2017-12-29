@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+{% if is_granted('ROLE_USER') %}
 <div>
     <table class="table table-condensed" style="width: 45%; margin: 10%">
         <tbody>
@@ -62,7 +62,7 @@
         </tr>
     </table>
 </div>
-
+{% endif %}
     {% if game.isUploader(app.user) %}
         <ul>
             <li>
