@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-        {% if is_granted('ROLE_ADMIN') %}
+        {% if is_granted('ROLE_USER') %}
 
 <div style="margin-left: 5%">
     <h1>Upload new game image</h1>

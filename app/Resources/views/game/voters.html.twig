@@ -27,7 +27,9 @@
             {% endfor %}
             {% for downvoter in game.downvoters %}
                 <tr>
-                    <td>{{ downvoter.username }}</td>
+                    <td>
+                        <a href="{{ path('user_show', { 'id': downvoter.id }) }}"> {{ downvoter.username }}</a>
+                    </td>
                     <td>
                         {% if not game.upvoter(downvoter) %}
                             <span style="color:red" class="glyphicon glyphicon-thumbs-down" aria-hidden="true" />
