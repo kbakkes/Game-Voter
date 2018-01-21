@@ -12,4 +12,4 @@ A Symfony project created on September 11, 2017, 6:18 pm.
     `php bin/console doctrine:schema:update`
     
    
-- Import the CSV file to have a filled database. 
+- Execute the SQL file in your database: `import-me.sql` 
