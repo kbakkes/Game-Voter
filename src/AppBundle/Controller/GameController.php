@@ -78,8 +78,6 @@ class GameController extends Controller
      * @Route("/profile/games", name="current_user_games")
      */
     public function showMyGames(){
-        $em = $this->getDoctrine()->getManager();
-
 
         $currentUser = $this->get('security.token_storage')->getToken()->getUser();
         $game = new Game();
@@ -91,8 +89,6 @@ class GameController extends Controller
             array('uploadedBy' => $user ),
             array('uploadedAt' => 'ASC'));
 
-
-        // query builder  return games where uploaded by id = currentuser
         return $this->render(':game:mygames.html.twig', array(
             'games' => $games,
             'user' => $currentUser,

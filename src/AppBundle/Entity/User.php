@@ -55,6 +55,7 @@ class User extends BaseUser
 
 
     public function __construct() {
+        parent::__construct();
         $this->games = new ArrayCollection();
         $this->upvotedgames = new ArrayCollection();
         $this->downvotedgames = new ArrayCollection();
